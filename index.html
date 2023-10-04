@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title> DJPJ's Pomodoro Timer </title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    yuh
-    <script src="yuh.js" type="module"></script>
+    <div class="main-container center">
+        <div class="timer-container">
+            <div class="minutes time">25</div>
+            <div class="colon time">:</div>
+            <div class="seconds time">00</div>
+        </div>
+        <div class="buttons-container">
+            <button class="butt" onclick="start()">START</button>
+            <button class="butt" onclick="pause()">PAUSE</button>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk?si=Ywo3EV3yI15h-JFU&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    </div>
+    <script src="yuh.js"></script>
 </body>
 </html>

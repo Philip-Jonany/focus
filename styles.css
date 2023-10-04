@@ -1,0 +1,35 @@
+body {
+    background-color: white;
+    font-family: sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    background-color: white;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.timer-container {
+    display:flex
+}
+
+.time {
+    display:inline-block;
+    font-size: 200px;
+    font-weight: bolder;
+}
+
+
+.buttons-container{
+    width:500px;
+    height:500px;
+}
+
+.butt {
+    width:200px;
+    height:120px;
+    font-size: 40px;
+}
