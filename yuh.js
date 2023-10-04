@@ -26,5 +26,6 @@ function updateTimer() {
     const minutes = Math.floor(time / 60) % 60;
     document.querySelector(".seconds").innerText = seconds;
     document.querySelector(".minutes").innerText = minutes;
+    document.title = minutes + ":" + seconds;
     time -=1;
 }
