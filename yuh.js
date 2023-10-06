@@ -16,12 +16,12 @@ function pause() {
 }
 
 function updateTimer() {
+    time -= 1;
     const seconds = time % 60;
     const minutes = Math.floor(time / 60) % 60;
     document.querySelector(".seconds").innerText = seconds;
     document.querySelector(".minutes").innerText = minutes;
     document.title = minutes + ":" + seconds;
-    time -=1;
 
     if (time <= 0 ) {
         doneAudio.play()
