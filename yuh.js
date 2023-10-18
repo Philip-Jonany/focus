@@ -1,18 +1,42 @@
 const timerContainer = document.querySelector(".timerContainer"); 
 const initialTime = 25 * 60;
+const restTime = 5 * 60;
+
+
 // time remaining in seconds
 var time = initialTime
+var ticking = false
 var startAudio = new Audio('start.mp3')
 var doneAudio = new Audio('done.mp3')
 var intervalID
 
 function start () {
-    intervalID = setInterval(updateTimer,1000);
     startAudio.play();
+    if (ticking) {
+        time = initialTime;
+    }
+    else {
+        intervalID = setInterval(updateTimer, 1000);
+        ticking = true;
+    }
+}
+
+function rest () {
+    startAudio.play();
+    if (ticking) {
+        time = restTime
+    }
+    else {
+        intervalID = setInterval(updateTimer, 1000);
+        ticking = true;
+    }
 }
 
 function pause() {
-    clearInterval(intervalID);
+    if (ticking) {
+        clearInterval(intervalID);
+        ticking = false;
+    }
 }
 
 function updateTimer() {
@@ -25,7 +49,7 @@ function updateTimer() {
 
     if (time <= 0 ) {
         doneAudio.play()
-        setTimeout(function(){doneAudio.play()}, 2000)
+        setTimeout(function(){doneAudio.play()}, 1000)
         clearInterval(intervalID)
         time = initialTime;
     }
