@@ -10,7 +10,7 @@ var startAudio = new Audio('start.mp3')
 var doneAudio = new Audio('done.mp3')
 var intervalID
 
-function start () {
+function start() {
     startAudio.play();
     if (ticking) {
         time = initialTime;
