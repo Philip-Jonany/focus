@@ -23,9 +23,7 @@ function start () {
 
 function rest () {
     startAudio.play();
-    if (ticking) {
-        time = restTime
-    }
+    time = restTime;
     else {
         intervalID = setInterval(updateTimer, 1000);
         ticking = true;
@@ -51,6 +49,7 @@ function updateTimer() {
         doneAudio.play()
         setTimeout(function(){doneAudio.play()}, 1000)
         clearInterval(intervalID)
+        ticking = false;
         time = initialTime;
     }
 }
