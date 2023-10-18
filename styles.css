@@ -1,34 +1,40 @@
 body {
     background-color: white;
     font-family: sans-serif;
+    align-items: center;
 }
 
 .main-container {
     width: 100%;
-    height: 100vh;
-    display:inline-flex;
+    height: 100%;
     background-color: white;
     justify-content: center;
     margin: 0 auto;
 }
 
 .timer-container {
-    display:flex
+    width: 50%;
+    height: 50%;
+    display:flex;
+    justify-content: center;
+    background-color: #FFCCCB;
 }
 
 .time {
-    display:inline-block;
-    font-size: 200px;
+    /* display:inline-block; */
+    justify-content: center;
+    font-size: 280px;
     font-weight: bolder;
+    color: white;
 }
 
 .buttons-container{
-    width:500px;
-    height:500px;
+    width:50%;
+    height:50%;
 }
 
 .butt {
-    width:200px;
-    height:120px;
-    font-size: 40px;
+    width:32.9%;
+    height:50%;
+    font-size: 50px;
 }
