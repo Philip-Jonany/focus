@@ -24,7 +24,7 @@ function start () {
 function rest () {
     startAudio.play();
     time = restTime;
-    else {
+    if (!ticking) {
         intervalID = setInterval(updateTimer, 1000);
         ticking = true;
     }
