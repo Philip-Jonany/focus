@@ -21,7 +21,7 @@ function start() {
     }
 }
 
-function rest () {
+function rest() {
     startAudio.play();
     time = restTime;
     if (!ticking) {
