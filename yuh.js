@@ -1,6 +1,7 @@
 const timerContainer = document.querySelector(".timerContainer"); 
 const initialTime = 25 * 60;
 const restTime = 5 * 60;
+const favicon = document.getElementById("favicon");
 
 
 // time remaining in seconds
@@ -48,6 +49,7 @@ function updateTimer() {
     if (time <= 0 ) {
         doneAudio.play()
         setTimeout(function(){doneAudio.play()}, 1000)
+        favicon.href = "redcircle.png";
         clearInterval(intervalID)
         ticking = false;
         time = initialTime;
