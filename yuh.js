@@ -53,6 +53,5 @@ function updateTimer() {
         clearInterval(intervalID)
         ticking = false;
         time = initialTime;
-        alert("TAKE A BREAK!");
     }
 }
