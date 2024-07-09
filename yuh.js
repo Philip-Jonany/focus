@@ -48,6 +48,7 @@ function updateTimer() {
 
     if (time <= 0 ) {
         favicon.href = "redcircle.png";
+        // asdf
         doneAudio.play()
         setTimeout(function(){doneAudio.play()}, 1000)
         clearInterval(intervalID)
