@@ -47,9 +47,9 @@ function updateTimer() {
     document.title = minutes + ":" + seconds;
 
     if (time <= 0 ) {
+        favicon.href = "redcircle.png";
         doneAudio.play()
         setTimeout(function(){doneAudio.play()}, 1000)
-        favicon.href = "redcircle.png";
         clearInterval(intervalID)
         ticking = false;
         time = initialTime;
