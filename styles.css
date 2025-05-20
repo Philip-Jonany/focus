@@ -1,40 +1,115 @@
 body {
-    background-color: white;
-    font-family: sans-serif;
+    background-color: #1E1E1E; /* VS Code Dark+ Editor Background */
+    color: #D4D4D4; /* Default text color */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "HelveticaNeue-Light", system-ui, "Ubuntu", "Droid Sans", sans-serif; /* Common VS Code font stack */
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center; /* Center content vertically */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Add some padding around the content */
+    box-sizing: border-box; /* Ensure padding doesn't add to total width/height */
+    text-align: center;
 }
 
 .main-container {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    justify-content: center;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Allow it to take available width within body padding */
+    max-width: 900px; /* Max width for readability */
 }
 
 .timer-container {
-    width: 50%;
-    height: 50%;
-    display:flex;
+    display: flex;
     justify-content: center;
-    background-color: #FFCCCB;
+    align-items: center;
+    color: #D4D4D4; /* Bright text for the timer */
+    margin-bottom: 40px; /* Increased space below timer */
+    line-height: 1; /* Prevent extra line height from affecting size */
 }
 
-.time {
-    /* display:inline-block; */
-    justify-content: center;
-    font-size: 280px;
-    font-weight: bolder;
-    color: white;
+.timer-container .time {
+    font-size: 18vw; /* VERY LARGE: 18% of viewport width */
+    font-weight: 200; /* Lighter font weight for a modern, clean look */
+    padding: 0 0.1em; /* Relative padding for spacing */
 }
 
-.buttons-container{
-    width:50%;
-    height:50%;
+.timer-container .colon {
+    font-size: 15vw; /* Slightly smaller colon */
+    font-weight: 200;
+    margin: 0 -0.05em; /* Fine-tune colon position */
+    padding-bottom: 0.12em; /* Align colon better vertically with numbers */
+}
+
+/* Responsive adjustments for extremely large clock on smaller screens */
+@media (min-width: 768px) {
+    .timer-container .time {
+        font-size: 12em; /* Cap font size on larger screens */
+    }
+    .timer-container .colon {
+        font-size: 10em; /* Cap font size on larger screens */
+        padding-bottom: 0.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .timer-container .time {
+        font-size: 22vw; /* Even larger percentage for very small screens */
+    }
+    .timer-container .colon {
+        font-size: 18vw;
+        padding-bottom: 0.15em;
+    }
+}
+
+
+.buttons-container {
+    margin-bottom: 40px; /* Increased space */
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
 }
 
 .butt {
-    width:32.9%;
-    height:50%;
-    font-size: 50px;
+    background-color: #007ACC; /* VS Code primary blue */
+    color: #FFFFFF;
+    border: 1px solid #007ACC; /* Border same as background for solid feel, or use a slightly darker tone like #005f9e */
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 2px; /* VS Code buttons are typically less rounded */
+    font-size: 40px; /* Standard button text size */
+    font-weight: 400; /* Normal font weight */
+    text-transform: uppercase; /* VS Code buttons often use uppercase */
+    letter-spacing: 0.5px; /* Slight letter spacing */
+    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+    min-width: 100px; /* Minimum width for buttons */
+}
+
+.butt:hover {
+    background-color: #008AE6; /* Lighter blue on hover */
+    border-color: #008AE6;
+}
+
+.butt:focus {
+    outline: 1px solid #007ACC; /* VS Code focus ring style */
+    outline-offset: 2px;
+}
+
+.butt:active {
+    background-color: #005F9E; /* Darker blue when pressed */
+    border-color: #005F9E;
+}
+
+iframe {
+    width: 80%; /* Larger iframe */
+    max-width: 760px; /* Max width for the iframe */
+    aspect-ratio: 16 / 9;
+    border: 1px solid #333333; /* Subtle border for the iframe */
+    border-radius: 0px; /* VS Code elements often have sharp corners */
+    display: block; /* To allow margin auto for centering if parent wasn't flex */
+    margin: 0 auto; /* Center iframe if its width is less than container */
 }
