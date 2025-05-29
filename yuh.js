@@ -8,7 +8,7 @@ const favicon = document.getElementById("favicon");
 var time = initialTime
 var ticking = false
 var startAudio = new Audio('start.mp3')
-var doneAudio = new Audio('done.mp3')
+var doneAudio = new Audio('notify.mp3')
 var intervalID
 
 function start() {
